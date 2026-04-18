@@ -88,12 +88,12 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#020617] text-white p-6">
 
-      {/* HEADER */}
+
       <div className="flex justify-between items-center mb-8">
         <div>
-          <h1 className="text-2xl font-bold">SalesAI</h1>
+          <h1 className="text-2xl font-bold">AI Data Analyst </h1>
           <p className="text-gray-400 text-sm">
-            Intelligent Sales Dashboard
+            Intelligent Dashboard
           </p>
         </div>
 
@@ -105,10 +105,9 @@ export default function Home() {
         </button>
       </div>
 
-      {/* ACTION CARDS */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
 
-        {/* Upload */}
+
         <div className="bg-[#020617] border border-gray-800 p-6 rounded-xl">
           <p className="font-semibold mb-2">Upload</p>
           <input
@@ -124,7 +123,6 @@ export default function Home() {
           </button>
         </div>
 
-        {/* Charts */}
         <div
           onClick={fetchCharts}
           className="bg-[#022c22] border border-cyan-500 p-6 rounded-xl cursor-pointer"
@@ -133,7 +131,6 @@ export default function Home() {
           <p className="text-gray-400 text-sm">Revenue analytics</p>
         </div>
 
-        {/* Top Products */}
         <div
           onClick={async () => {
             const res = await fetch("https://ai-sales-dashboard-backendend.onrender.com/process-query", {
@@ -154,7 +151,6 @@ export default function Home() {
           <p className="text-gray-400 text-sm">Best performers</p>
         </div>
 
-        {/* Sales by Region */}
         <div
           onClick={async () => {
             const res = await fetch("https://ai-sales-dashboard-backendend.onrender.com/process-query", {
@@ -225,7 +221,7 @@ export default function Home() {
   )}
 </div>
 
-      {/* RESULT */}
+      
       <div className="bg-[#020617] border border-gray-800 p-6 rounded-xl">
         <h2 className="mb-2 font-semibold">Analysis Result</h2>
         <pre className="text-sm text-gray-300">
@@ -233,7 +229,7 @@ export default function Home() {
         </pre>
       </div>
 
-      {/* AI SIDEBAR */}
+      
       {showChat && (
         <div className="fixed right-0 top-0 h-full w-80 bg-[#020617] border-l border-gray-800 p-4">
           <div className="flex justify-between mb-4">
