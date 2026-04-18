@@ -30,7 +30,7 @@ export default function Home() {
     const formData = new FormData();
     formData.append("file", file);
 
-    await fetch("http://localhost:5000/upload", {
+    await fetch("https://ai-sales-dashboard-backendend.onrender.com/upload", {
       method: "POST",
       body: formData
     });
@@ -38,7 +38,7 @@ export default function Home() {
 
   // Charts
   const fetchCharts = async () => {
-    const res = await fetch("http://localhost:5000/analyze");
+    const res = await fetch("https://ai-sales-dashboard-backendend.onrender.com/analyze");
     const data = await res.json();
     setChartData(data.chartData);
   };
@@ -49,7 +49,7 @@ export default function Home() {
 
     setMessages(prev => [...prev, { type: "user", text: query }]);
 
-    const res = await fetch("http://localhost:5000/ai-query", {
+    const res = await fetch("https://ai-sales-dashboard-backendend.onrender.com/ai-query", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -60,7 +60,7 @@ export default function Home() {
     const result = await res.json();
 
     if (result.aiResponse) {
-      const processRes = await fetch("http://localhost:5000/process-query", {
+      const processRes = await fetch("https://ai-sales-dashboard-backendend.onrender.com/process-query", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -136,7 +136,7 @@ export default function Home() {
         {/* Top Products */}
         <div
           onClick={async () => {
-            const res = await fetch("http://localhost:5000/process-query", {
+            const res = await fetch("https://ai-sales-dashboard-backendend.onrender.com/process-query", {
               method: "POST",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify({
@@ -157,7 +157,7 @@ export default function Home() {
         {/* Sales by Region */}
         <div
           onClick={async () => {
-            const res = await fetch("http://localhost:5000/process-query", {
+            const res = await fetch("https://ai-sales-dashboard-backendend.onrender.com/process-query", {
               method: "POST",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify({
@@ -178,7 +178,7 @@ export default function Home() {
         {/* Insights */}
         <div
           onClick={async () => {
-            const res = await fetch("http://localhost:5000/insights");
+            const res = await fetch("https://ai-sales-dashboard-backendend.onrender.com/insights");
             const data = await res.json();
             setAnalysisResult(data.insights);
           }}
