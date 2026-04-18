@@ -2,7 +2,7 @@
 
 ## 🚀 Live Demo
 
-🌐 Frontend:https://ai-sales-dashboard-frontend.vercel.app/)
+🌐 Frontend:https://ai-sales-dashboard-frontend.vercel.app/
 🔗 Backend API: https://ai-sales-dashboard-backendend.onrender.com
 
 ---
